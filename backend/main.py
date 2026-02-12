@@ -15,7 +15,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",                 # Local React development
-        "https://your-frontend-name.vercel.app"  # Production frontend URL
+        "live-mood-architect.vercel.app"  # Production frontend URL
     ],
     allow_methods=["*"],
     allow_headers=["*"],
