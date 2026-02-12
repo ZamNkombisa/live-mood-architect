@@ -5,7 +5,7 @@ A full-stack therapeutic affirmation generator. This app uses FastAPI on the bac
 🔗 Live Links
 Live App (Frontend): []
 
-API Endpoint (Backend): []
+API Endpoint (Backend): [https://live-mood-architect-backend.onrender.com]
 
 🛠 Features & Requirements Met
 Full-Stack Integration: React frontend communicating with a FastAPI backend.

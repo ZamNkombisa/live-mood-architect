@@ -18,7 +18,7 @@ function App() {
     try {
       // Logic: Send user input to the FastAPI backend
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/affirmation",
+        "https://live-mood-architect-backend.onrender.com/api/affirmation",
         formData,
       );
       
