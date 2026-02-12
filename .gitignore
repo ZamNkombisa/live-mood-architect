@@ -1,0 +1,21 @@
+# Dependency Directories
+node_modules/
+venv/
+env/
+__pycache__/
+
+# Environment Secrets (CRITICAL)
+.env
+.env.local
+.env.*.local
+
+# Build Outputs
+dist/
+build/
+out/
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+*.log
