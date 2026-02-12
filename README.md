@@ -1,57 +1,35 @@
-🧘‍♂️ Live Mood Architect
+# 🏛️ Live Mood Architect
 
-A full-stack therapeutic affirmation generator. This app uses FastAPI on the backend and React (Vite) on the frontend, integrated with Groq (Llama 3) for empathetic, real-time responses.
+A full-stack AI-driven affirmation generator that provides personalized, empathetic responses based on the user's current headspace.
 
-🔗 Live Links
-Live App (Frontend): []
+## 🔗 Live Links
 
-API Endpoint (Backend): [https://live-mood-architect-backend.onrender.com]
+- **Frontend (Vercel):** [https://live-mood-architect.vercel.app/]
+- **Backend API (Render):** [https://live-mood-architect-backend.onrender.com]
 
-🛠 Features & Requirements Met
-Full-Stack Integration: React frontend communicating with a FastAPI backend.
+## 🛠️ Tech Stack
 
-AI Safety Logic: Custom system prompting to prevent medical diagnoses and provide crisis resources (Self-harm intent detection).
+- **Frontend:** React (Vite), Axios, CSS3 (Glassmorphism)
+- **Backend:** FastAPI (Python), Pydantic
+- **AI Model:** Llama-3-70b via Groq SDK
+- **Deployment:** Vercel & Render
 
-Environment Hygiene: Secure handling of API keys via environment variables (Zero secrets committed to GitHub).
+## 🛡️ Key Features & Requirements Met
 
-UX/UI: Responsive glassmorphism design with loading states and error handling.
+- **AI Safety Guardrails:** Implemented a robust system prompt to prevent medical diagnoses and handle crisis-related keywords with professional resources.
+- **Environment Hygiene:** Secured sensitive API keys using `python-dotenv` and hosting-level environment variables (no secrets committed to GitHub).
+- **CORS Configuration:** Securely whitelisted production origins to allow cross-domain communication.
+- **User Experience:** Implemented loading states and user-friendly error handling to manage API latency and potential downtime.
 
-⚙️ Local Setup
+## 🚀 How to Run Locally
 
-1. Backend
-   Bash / Powershell
-   cd backend
-   python -m venv venv
+1. **Backend:**
+   - `cd backend`
+   - `pip install -r requirements.txt`
+   - Create a `.env` with your `GROQ_API_KEY`
+   - `uvicorn main:app --reload`
 
-# Activate: venv\Scripts\activate (Windows) or source venv/bin/activate (Mac)
-
-pip install -r requirements.txt
-
-# Create .env and add: GROQ_API_KEY
-
-uvicorn main:app --reload
-
-2. Frontend
-   Bash / Powershell
-   cd frontend
-   npm install
-
-# Create .env.local and add: VITE_API_URL=http://127.0.0.1:8000
-
-npm run dev
-🔐 Required Environment Variables
-GROQ_API_KEY
-
-VITE_API_URL: (Frontend) The URL of the deployed or local backend (Check top for deployed URL).
-
-🚀 Deployment Steps
-Backend: Deployed on Render as a Web Service. The GROQ_API_KEY was added via the Render "Environment" dashboard.
-
-Frontend: Deployed on Vercel. CORS was configured in the backend to allow requests from the Vercel domain.
-
-📈 Future Improvements
-Unit Testing: Add pytest for the safety prompt to ensure 100% compliance with non-clinical boundaries.
-
-Persistence: Implement a database (PostgreSQL/Supabase) to allow users to "heart" and save their favorite affirmations.
-
-Rate Limiting: Implement backend throttling to prevent API abuse.
+2. **Frontend:**
+   - `cd frontend`
+   - `npm install`
+   - `npm run dev`
